@@ -3,6 +3,8 @@ import { SplitText } from "gsap/all";
 import gsap from "gsap";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import coffeeBeans from "../assets/images/coffee-beans.png";
+import videoFile from "../assets/videos/output.mp4";
 
 const Hero = () => {
   const videoRef = useRef();
@@ -155,7 +157,7 @@ const Hero = () => {
       {/* Sağ coffee beans */}
       <img
         id="right-coffee-beans"
-        src="/images/coffee-beans.png"
+        src={coffeeBeans}
         alt="Coffee Beans"
         className="absolute md:right-[-20px] right-[-120px] rotate-[90deg] md:bottom-[-300px] bottom-[-200px] transform -translate-y-1/2 md:w-lg w-3xs h-auto z-30 opacity-0"
       />
@@ -164,7 +166,7 @@ const Hero = () => {
       <div id="video" className="video absolute ml-10 inset-0 z-20 opacity-0">
         <video
           ref={videoRef}
-          src="/videos/output.mp4"
+          src={videoFile}
           muted
           loop
           playsInline

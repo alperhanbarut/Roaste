@@ -1,41 +1,47 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import gallery1 from "../assets/images/gallery1.jpg";
+import gallery2 from "../assets/images/gallery2.jpg";
+import gallery3 from "../assets/images/gallery3.jpg";
+import gallery4 from "../assets/images/gallery4.jpg";
+import gallery5 from "../assets/images/gallery5.jpg";
+import gallery6 from "../assets/images/gallery6.jpg";
 
 const Gallery = () => {
   const galleryImages = [
     {
       id: 1,
-      src: "/images/gallery1.jpg",
+      src: gallery1,
       alt: "Kahve Çekirdeği",
       title: "Premium Çekirdekler",
     },
     {
       id: 2,
-      src: "/images/gallery2.jpg",
+      src: gallery2,
       alt: "Espresso",
       title: "Perfect Espresso",
     },
     {
       id: 3,
-      src: "/images/gallery3.jpg",
+      src: gallery3,
       alt: "Latte Art",
       title: "Latte Sanatı",
     },
     {
       id: 4,
-      src: "/images/gallery4.jpg",
+      src: gallery4,
       alt: "Coffee Shop",
       title: "Roasté Atmosferi",
     },
     {
       id: 5,
-      src: "/images/gallery5.jpg",
+      src: gallery5,
       alt: "Pour Over",
       title: "El Yapımı Kahve",
     },
     {
       id: 6,
-      src: "/images/gallery6.jpg",
+      src: gallery6,
       alt: "Coffee Roasting",
       title: "Kavurma Sanatı",
     },

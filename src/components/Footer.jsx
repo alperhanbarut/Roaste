@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import { gsap, SplitText } from "gsap/all";
 import { useMediaQuery } from "react-responsive";
+import logo from "../assets/images/logo.png";
 
 const Footer = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -102,7 +103,7 @@ const Footer = () => {
               <div className="flex justify-center">
                 <img
                   id="footer-logo"
-                  src="/images/logo.png"
+                  src={logo}
                   alt="Roasté Logo"
                   className="md:w-32 md:h-32 w-24 h-24"
                   style={{ filter: "brightness(0) invert(1)" }}

@@ -3,6 +3,12 @@ import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import { useRef } from "react";
 import { useMediaQuery } from "react-responsive";
+import espressoImg from "../assets/images/espresso.jpg";
+import americanoImg from "../assets/images/americano.jpg";
+import cappucinoImg from "../assets/images/cappucino.jpg";
+import latteImg from "../assets/images/latte.jpg";
+import mochaImg from "../assets/images/mocha.jpg";
+import flatWhiteImg from "../assets/images/flat-white.jpg";
 
 const Menu = () => {
   const containerRef = useRef();
@@ -106,7 +112,7 @@ const Menu = () => {
           <div className="md:min-w-[380px] min-w-[220px] bg-white rounded-lg overflow-hidden">
             <div className="md:h-52 h-36">
               <img
-                src="/images/espresso.jpg"
+                src={espressoImg}
                 alt="Espresso"
                 className="w-full h-full object-cover"
               />
@@ -129,7 +135,7 @@ const Menu = () => {
           <div className="md:min-w-[380px] min-w-[220px] bg-white rounded-lg overflow-hidden">
             <div className="md:h-52 h-36">
               <img
-                src="/images/americano.jpg"
+                src={americanoImg}
                 alt="Americano"
                 className="w-full h-full object-cover"
               />
@@ -152,7 +158,7 @@ const Menu = () => {
           <div className="md:min-w-[380px] min-w-[220px] bg-white rounded-lg overflow-hidden">
             <div className="md:h-52 h-36">
               <img
-                src="/images/cappucino.jpg"
+                src={cappucinoImg}
                 alt="Cappuccino"
                 className="w-full h-full object-cover"
               />
@@ -175,7 +181,7 @@ const Menu = () => {
           <div className="md:min-w-[380px] min-w-[220px] bg-white rounded-lg overflow-hidden">
             <div className="md:h-52 h-36">
               <img
-                src="/images/latte.jpg"
+                src={latteImg}
                 alt="Latte"
                 className="w-full h-full object-cover"
               />
@@ -198,7 +204,7 @@ const Menu = () => {
           <div className="md:min-w-[380px] min-w-[220px] bg-white rounded-lg overflow-hidden">
             <div className="md:h-52 h-36">
               <img
-                src="/images/mocha.jpg"
+                src={mochaImg}
                 alt="Mocha"
                 className="w-full h-full object-cover"
               />
@@ -221,7 +227,7 @@ const Menu = () => {
           <div className="md:min-w-[380px] min-w-[220px] bg-white rounded-lg overflow-hidden">
             <div className="md:h-52 h-36">
               <img
-                src="/images/flat-white.jpg"
+                src={flatWhiteImg}
                 alt="Flat White"
                 className="w-full h-full object-cover"
               />

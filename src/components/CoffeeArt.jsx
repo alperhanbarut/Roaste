@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useMediaQuery } from "react-responsive";
+import baristaImg from "../assets/images/barista.jpg";
 
 const CoffeeArt = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
@@ -86,7 +87,7 @@ const CoffeeArt = () => {
         {!isMobile ? (
           <div className="masked-img mx-auto">
             <img
-              src="/images/barista.jpg"
+              src={baristaImg}
               alt="Coffee Art"
               className="rounded-lg shadow-2xl"
             />
@@ -94,7 +95,7 @@ const CoffeeArt = () => {
         ) : (
           <div className="mobile-masked-img mx-auto">
             <img
-              src="/images/barista.jpg"
+              src={baristaImg}
               alt="Coffee Art"
               className="rounded-lg shadow-2xl"
             />

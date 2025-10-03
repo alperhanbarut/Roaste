@@ -1,5 +1,6 @@
 import { useGSAP } from "@gsap/react";
 import { gsap, ScrollTrigger } from "gsap/all";
+import logo from "../assets/images/logo.png";
 
 const Navbar = () => {
   useGSAP(() => {
@@ -176,9 +177,9 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex-shrink-0 mx-6">
-            <a href="/">
+            <a href={import.meta.env.BASE_URL}>
               <img
-                src="/images/logo.png"
+                src={logo}
                 alt="Roasté Logo"
                 className="nav-logo h-40 w-auto object-contain transition-all duration-300"
                 loading="lazy"
@@ -207,9 +208,9 @@ const Navbar = () => {
       <nav className="md:hidden fixed top-0 left-0 right-0 w-full h-16 bg-transparent backdrop-blur-md flex items-center px-4 z-[999]">
         {/* Logo Sol */}
         <div className="flex-shrink-0">
-          <a href="/">
+          <a href={import.meta.env.BASE_URL}>
             <img
-              src="/images/logo.png"
+              src={logo}
               alt="Roasté Logo"
               className="nav-logo h-18 w-auto object-contain transition-all duration-300"
               loading="lazy"
