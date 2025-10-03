@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Sofadi+One&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-milk: #f8f5f0;
+  --color-coffee: #6e4b3a;
+  --color-coffee-dark: #8b5a3c;
+  --color-coffee-light: #a67c7c;
+  --color-espresso: #3d2914;
+  --color-cream: #fdf9f3;
+  --font-lora: "Lora", serif;
+  --font-playfair: "Playfair Display", serif;
+}
+
+video {
+  @apply w-full h-[50vh] md:h-[70%] absolute bottom-0 left-0 object-cover md:object-contain object-bottom;
+}
+
+/* Mobil video optimizasyonları */
+@media (max-width: 767px) {
+  video {
+    transform: scale(0.8) translateZ(0);
+    will-change: auto;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+@layer utilities {
+  .masked-container {
+    @apply absolute inset-0 flex flex-col items-center justify-center h-screen;
+
+    div {
+      @apply opacity-0 px-5 space-y-4 text-center;
+
+      h3 {
+        @apply md:text-3xl text-xl text-center font-serif text-black;
+      }
+
+      p {
+        @apply text-base text-center text-white/80 max-w-md mx-auto;
+      }
+    }
+  }
+
+  /* Aktif Navbar Link Stili */
+  .nav-link-active {
+    @apply text-coffee-dark font-bold relative;
+  }
+
+  .nav-link-active::after {
+    content: "";
+    @apply absolute -bottom-1 left-0 w-full h-0.5 bg-coffee-dark;
+  }
+
+  /* Coffee Bean Mask */
+  .masked-img {
+    -webkit-mask-image: url("/images/coffee-bean.png");
+    mask-image: url("/images/coffee-bean.png");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-masked-img {
+    -webkit-mask-image: url("/images/coffee-bean.png");
+    mask-image: url("/images/coffee-bean.png");
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-masked-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .masked-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .abs-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .size-full {
+    width: 100%;
+    height: 100%;
+  }
+
+  .vertical-text {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .overflow-x-auto {
+    scroll-behavior: smooth;
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.35s ease both;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
